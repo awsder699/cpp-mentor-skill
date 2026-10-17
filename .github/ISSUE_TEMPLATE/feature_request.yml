@@ -1,0 +1,56 @@
+name: 功能建议
+description: 建议新增教学内容、策略或工程改进
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        欢迎建议！请说明它服务于什么**教学场景**——这是判断是否采纳的主要依据。
+
+  - type: textarea
+    id: scenario
+    attributes:
+      label: 教学场景
+      description: 什么类型的学生、问什么类型的问题时，会需要这个改进？
+      placeholder: |
+        例如：初学者问「类怎么用」时，类比库缺少「图纸与房子」的失效边界说明
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 建议内容
+      description: 具体的改进方案（新增类比 / 迷思条目 / 话术 / 流程步骤……）
+    validations:
+      required: true
+
+  - type: textarea
+    id: pain
+    attributes:
+      label: 现状痛点
+      description: 不这样做时，教学效果差在哪里？
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: 涉及区域
+      options:
+        - SKILL.md（核心流程/原则）
+        - teaching-playbook.md（流程手册）
+        - level-assessment.md（水平评估题库）
+        - explanation-techniques.md（类比/话术/迷思）
+        - code-style.md（代码规范）
+        - 工程文件（README/模板/脚本）
+    validations:
+      required: false
+
+  - type: textarea
+    id: verify
+    attributes:
+      label: 验证方式
+      description: 如何用一个真实 C++ 问题验证这个改动有效？
+    validations:
+      required: false

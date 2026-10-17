@@ -1,0 +1,34 @@
+# ===== 本地与工作区文件（不上传） =====
+.workbuddy/
+dist/
+*.zip
+
+# ===== 操作系统 =====
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# ===== 编辑器 =====
+.vscode/*
+!.vscode/settings.json.example
+.idea/
+*.swp
+*.swo
+*~
+
+# ===== Python（开发/打包脚本用） =====
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# ===== 日志与临时文件 =====
+*.log
+*.tmp
+*.temp

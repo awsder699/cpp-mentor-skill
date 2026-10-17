@@ -1,0 +1,67 @@
+name: Bug 报告
+description: 报告 Skill 的教学行为或内容问题
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈！这个 Skill 的「产品」是教学行为本身，请尽量提供**触发场景**与**实际行为**的细节，这比"效果不好"更容易定位。
+
+  - type: textarea
+    id: trigger
+    attributes:
+      label: 触发场景
+      description: 你提出的 C++ 问题、粘贴的代码或报错信息
+      placeholder: |
+        例如：「讲讲 vector 扩容时迭代器为什么会失效」
+        或贴出你的代码 / 报错
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际行为
+      description: Skill 的响应中，哪一步不符合教学预期？
+      placeholder: |
+        例如：没有先评估就直接开讲；卡壳时直接给了完整答案；收尾没有自测题……
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望行为
+      description: 按 SKILL.md 的教学原则，此处应该怎么做？
+      placeholder: |
+        例如：应先提问确认我对迭代器的了解程度；应先给最小示例让我预测后果……
+    validations:
+      required: true
+
+  - type: dropdown
+    id: level
+    attributes:
+      label: 你的 C++ 水平（自评）
+      options:
+        - L0 零基础
+        - L1 初学者（会基本语法）
+        - L2 进阶（能写完整程序）
+        - L3 熟练（关注标准细节与设计权衡）
+    validations:
+      required: false
+
+  - type: input
+    id: platform
+    attributes:
+      label: Agent 平台与版本
+      description: 如 WorkBuddy 5.8 / Claude Code x.y
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: 补充信息
+      description: 相关主题域（指针内存 / OOP / STL / 模板 / 现代 C++ / 调试 / 竞赛题……）、截图等
+    validations:
+      required: false
